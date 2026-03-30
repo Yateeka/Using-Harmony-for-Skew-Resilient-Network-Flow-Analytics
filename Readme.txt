@@ -1,20 +1,20 @@
-# 🚀 Harmony-Based Skew-Resilient Network Flow Analytics
+# Harmony-Based Skew-Resilient Network Flow Analytics
 
-This project implements a **Harmony-inspired distributed vector search system** for real-time network flow analytics under **skewed and bursty traffic conditions**.
+This project implements a Harmony-inspired distributed vector search system for real-time network flow analytics under skewed and bursty traffic conditions.
 
-We adapt the Harmony architecture to the **CIC-IDS2017 dataset**, transforming network flow features into vector embeddings and evaluating different partitioning strategies.
+We adapt the Harmony architecture to the CIC-IDS2017 dataset, transforming network flow features into vector embeddings and evaluating different partitioning strategies.
 
 ---
 
-## 📌 Key Features
+## Key Features
 
-- Network flow → vector embedding pipeline  
-- Evaluation under **uniform and skewed workloads**  
+- Network flow to vector embedding pipeline  
+- Evaluation under uniform and skewed workloads  
 - Multiple system designs:
   - Vector-based partitioning
   - Dimension-based partitioning
   - Hybrid Harmony-style execution
-  - Full Harmony pipeline (Algorithm-based)
+  - Full Harmony pipeline (algorithm-based)
 - Metrics:
   - Latency (mean, P95, P99)
   - Throughput (QPS)
@@ -23,8 +23,9 @@ We adapt the Harmony architecture to the **CIC-IDS2017 dataset**, transforming n
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
+```
 erp-harmony/
 ├── data/
 │   ├── raw/
@@ -37,10 +38,11 @@ erp-harmony/
 │   └── harmony_pipeline.py
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
-## ⚙️ Setup
+## Setup
 
 ```bash
 python3 -m venv .venv
@@ -50,7 +52,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📥 Dataset Setup
+## Dataset Setup
 
 Download CIC-IDS2017 dataset (via Kaggle):
 
@@ -67,7 +69,7 @@ data/raw/cicids2017/
 
 ---
 
-## 🔄 Step 1: Preprocessing
+## Step 1: Preprocessing
 
 ```bash
 python scripts/preprocess_cicids2017.py
@@ -87,7 +89,7 @@ data/processed/
 
 ---
 
-## 📊 Step 2: Run Baselines
+## Step 2: Run Baselines
 
 ### Vector Baseline
 
@@ -105,7 +107,7 @@ python scripts/dimension_baseline.py --query-set skewed
 
 ---
 
-## 🚀 Step 3: Hybrid Systems
+## Step 3: Hybrid Systems
 
 ### Hybrid (Vector + Dimension)
 
@@ -123,7 +125,7 @@ python scripts/harmony_pipeline.py --query-set skewed
 
 ---
 
-## 📈 Metrics
+## Metrics
 
 Each script reports:
 
@@ -135,7 +137,7 @@ Each script reports:
 
 ---
 
-## 🧠 Concepts
+## Concepts
 
 - Vector partitioning  
 - Dimension partitioning  
@@ -146,22 +148,22 @@ Each script reports:
 
 ---
 
-## ⚠️ Notes
+## Notes
 
-- This is a **research prototype**
-- Original Harmony system is implemented in C++ and not publicly available
-- This project reproduces the **core algorithmic ideas in Python**
+- This is a research prototype  
+- The original Harmony system is implemented in C++ and is not publicly available  
+- This project reproduces the core algorithmic ideas in Python  
 
 ---
 
-## 👨‍💻 Authors
+## Authors
 
 - Yateeka Goyal  
 - Apu Kumar Chakroborti  
 
 ---
 
-## 🏁 Status
+## Status
 
 - Data pipeline complete  
 - Baselines implemented  
@@ -170,6 +172,6 @@ Each script reports:
 
 ---
 
-## 📜 License
+## License
 
 Academic use only
